@@ -3,15 +3,15 @@ session_start();
 error_reporting(0);
 $varsession = $_SESSION['email'];
 if ($varsession == null || $varsession == '') {
-    header("Location:http://localhost/tp2/");
+  header("Location:http://localhost/tp2new/");
 }
 
 // session_destroy();
 
 if (isset($_POST['submit'])) {
-    $nombre = $_POST['name'];
-    $email = $_POST['email'];
-    $tel = $_POST['telefono'];
+  $nombre = $_POST['name'];
+  $email = $_POST['email'];
+  $tel = $_POST['telefono'];
 }
 
 //<?php echo htmlspecialchars($_SERVER['PHP_SELF'])
@@ -22,136 +22,144 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logistic freedom</title>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
-    <link rel="stylesheet" href="../styles/contacto.css">
-    <link rel="stylesheet" href="../styles/navbar.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logistic freedom</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="../styles/contacto.css">
+  <link rel="stylesheet" href="../styles/navbar.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <nav class="navbar bg-body-tertiary fixed-top" style="padding: 0;">
+  <nav class="navbar bg-body-tertiary fixed-top" style="padding: 0;">
 
-        <div class="container-fluid">
-            
-            <div>
-                <a class="navbar-brand" href="#">
-                    <img class="imageNav" src="../images/favicon.png" alt="logo">
-                </a>
+    <div class="container-fluid">
 
-                <a class="btn btn-warning m-1" href="../includes/api/auth-api/logout.php"> Cerrar session </a>
-            </div>
+      <div>
+        <a class="navbar-brand" href="#">
+          <img class="imageNav" src="../images/favicon.png" alt="logo">
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <a class="btn btn-warning m-1" href="../includes/api/auth-api/logout.php"> Cerrar session </a>
+      </div>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-                <div class="offcanvas-body">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
 
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <div class="offcanvas-body">
 
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/tp2/alta-productos">Alta de productos</a>
-                        </li>
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/tp2/gestion-usuarios/">Gestión de usuarios</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/tp2new/alta-productos">Alta de productos</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/tp2/reportes/">Reportes</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tp2new/gestion-usuarios/">Gestión de usuarios</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/tp2/stock/">Stock</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tp2new/reportes/">Reportes</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/tp2/contacto/">Contacto</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tp2new/stock/">Stock</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/tp2/revisar-contacto/">Revisar contacto</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/tp2new/contacto/">Contacto</a>
+            </li>
 
-                    </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="/tp2new/revisar-contacto/">Revisar contacto</a>
+            </li>
 
-                </div>
-
-            </div>
+          </ul>
 
         </div>
 
-    </nav>
+      </div>
+
+    </div>
+
+  </nav>
 
 
-    <section class="cardContact">
-        <h1 class="title">Contáctenos</h1>
+  <section class="cardContact">
+    <h1 class="title">Contáctenos</h1>
 
-        <div class="contact-wrapper">
-            <div class="contact-form">
-                <form id="formContacto" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+    <div class="contact-wrapper">
+      <div class="contact-form">
+        <form id="formContacto" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
 
-                    <div class="mb-3">
+          <div class="mb-3">
 
-                        <label for="fullname" class="form-label">Nombre:</label>
-                        <input type="text" name="name" class="form-control" id="fullname" placeholder="Ingrese su nombre" required value="<?php if (isset($nombre))
-                                                                                                                                                echo $nombre ?>">
-                    </div>
-
-
-                    <div class="mb-3">
-
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su email" required value="<?php if (isset($email))
-                                                                                                                                            echo $email ?>">
-                    </div>
-
-                    <div class="mb-3">
-
-                        <label for="telefono" class="form-label">Teléfono:</label>
-                        <input type="number" name="telefono" class="form-control" pattern="[0-9] {10}" title="Solo se podran colocar 10 digitos" id="telefono" placeholder="Ingrese su email" required value="<?php if (isset($tel))
-                                                                                                                                                                                                                    echo $tel ?>">
-                    </div>
-
-
-                    <div class="mb-3">
-
-                        <label for="mensaje" class="form-label">Mensaje:</label>
-                        <textarea class="form-control" placeholder="Ingrese su mensaje" name="mensaje" id="mensaje" required></textarea>
-
-                    </div>
-
-
-                    <p class="botones">
-                        <button class="btn btn-success" type="submit" name="submit">Enviar</button>
-                    </p>
-                    <?php
-                    include("validar1.php");
-
-                    ?>
-                </form>
+            <label for="fullname" class="form-label">Nombre:</label>
+            <input type="text" name="name" class="form-control" id="fullname" placeholder="Ingrese su nombre" required
+              value="<?php if (isset($nombre))
+                echo $nombre ?>">
             </div>
 
-        </div>
-    </section>
 
-    <script src="https://kit.fontawesome.com/ce1f10009b.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+            <div class="mb-3">
+
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su email" required
+                value="<?php if (isset($email))
+                echo $email ?>">
+            </div>
+
+            <div class="mb-3">
+
+              <label for="telefono" class="form-label">Teléfono:</label>
+              <input type="number" name="telefono" class="form-control" pattern="[0-9] {10}"
+                title="Solo se podran colocar 10 digitos" id="telefono" placeholder="Ingrese su email" required value="<?php if (isset($tel))
+                echo $tel ?>">
+            </div>
+
+
+            <div class="mb-3">
+
+              <label for="mensaje" class="form-label">Mensaje:</label>
+              <textarea class="form-control" placeholder="Ingrese su mensaje" name="mensaje" id="mensaje"
+                required></textarea>
+
+            </div>
+
+
+            <p class="botones">
+              <button class="btn btn-success" type="submit" name="submit">Enviar</button>
+            </p>
+            <?php
+              include("validar1.php");
+
+              ?>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://kit.fontawesome.com/ce1f10009b.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

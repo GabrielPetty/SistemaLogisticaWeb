@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 $varsession = $_SESSION['email'];
 if ($varsession == null || $varsession == '') {
-  header("Location:http://localhost/tp2/");
+  header("Location:http://localhost/tp2new/");
 }
 
 // session_destroy();
@@ -88,27 +88,27 @@ if (isset($_POST['ean']) > 0) {
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/tp2/alta-productos">Alta de productos</a>
+              <a class="nav-link active" aria-current="page" href="/tp2new/alta-productos">Alta de productos</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/tp2/gestion-usuarios/">Gestión de usuarios</a>
+              <a class="nav-link" href="/tp2new/gestion-usuarios/">Gestión de usuarios</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/tp2/reportes/">Reportes</a>
+              <a class="nav-link" href="/tp2new/reportes/">Reportes</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/tp2/stock/">Stock</a>
+              <a class="nav-link" href="/tp2new/stock/">Stock</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/tp2/contacto/">Contacto</a>
+              <a class="nav-link" href="/tp2new/contacto/">Contacto</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/tp2/revisar-contacto/">Revisar contacto</a>
+              <a class="nav-link" href="/tp2new/revisar-contacto/">Revisar contacto</a>
             </li>
 
           </ul>
@@ -143,7 +143,7 @@ if (isset($_POST['ean']) > 0) {
       </div>
 
       <button type="submit" class="btn btn-success"> Ingresar producto</button>
-      <a class="btn btn-primary" href="/tp2/alta-automatica/altaAutomaticoProducto.php"> ALTA AUTOMÁTICA PRODUCTOS (solo para inicializar DB.)</a>
+      <a class="btn btn-primary" href="/tp2new/alta-automatica/altaAutomaticoProducto.php"> ALTA AUTOMÁTICA PRODUCTOS (solo para inicializar DB.)</a>
 
     </form>
   </section>

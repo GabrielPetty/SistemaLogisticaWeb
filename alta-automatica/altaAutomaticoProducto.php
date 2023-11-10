@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 $varsession = $_SESSION['email'];
 if ($varsession == null || $varsession == '') {
-    header("Location:http://localhost/tp2/");
+    header("Location:http://localhost/tp2new/");
 }
 
 // session_destroy();
@@ -56,27 +56,27 @@ if ($varsession == null || $varsession == '') {
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/tp2/alta-productos">Alta de productos</a>
+                            <a class="nav-link" aria-current="page" href="/tp2new/alta-productos">Alta de productos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/tp2/gestion-usuarios/">Gestión de usuarios</a>
+                            <a class="nav-link" href="/tp2new/gestion-usuarios/">Gestión de usuarios</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/tp2/reportes/">Reportes</a>
+                            <a class="nav-link" href="/tp2new/reportes/">Reportes</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/tp2/stock/">Stock</a>
+                            <a class="nav-link" href="/tp2new/stock/">Stock</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/tp2/contacto/">Contacto</a>
+                            <a class="nav-link" href="/tp2new/contacto/">Contacto</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/tp2/revisar-contacto/">Revisar contacto</a>
+                            <a class="nav-link" href="/tp2new/revisar-contacto/">Revisar contacto</a>
                         </li>
 
                     </ul>
@@ -118,7 +118,7 @@ if ($varsession == null || $varsession == '') {
     La funcionalidad está pensada para poder generar datos cuando la base de datos esta vacía y poder ejecutar pruebas. </p>
     
     <div class="botones"> 
-      <a class="btn btn-primary" href="/tp2/alta-productos"> Volver a stock </a>
+      <a class="btn btn-primary" href="/tp2new/alta-productos"> Volver a stock </a>
     </div>
     
     </section>';
@@ -132,7 +132,7 @@ if ($varsession == null || $varsession == '') {
     gestiones referidas al manejo de productos con esta información. </p>
     
     <div class="botones"> 
-      <a class="btn btn-primary" href="/tp2/alta-productos"> Volver a stock </a>
+      <a class="btn btn-primary" href="/tp2new/alta-productos"> Volver a stock </a>
     </div>
     
     </section>';
@@ -146,7 +146,7 @@ if ($varsession == null || $varsession == '') {
     más tarde. Si el problema persiste por favor informe al administrador. </p>
     
     <div class="botones"> 
-      <a class="btn btn-primary" href="/tp2/alta-productos"> Volver a stock </a>
+      <a class="btn btn-primary" href="/tp2new/alta-productos"> Volver a stock </a>
     </div>
     
     </section>';

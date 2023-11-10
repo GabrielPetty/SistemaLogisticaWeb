@@ -8,6 +8,6 @@ session_unset();
 // Destruir la sesión
 session_destroy();
 
-header("Location:http://localhost/tp2/");
+header("Location:http://localhost/tp2new/");
 
 ?>
